@@ -123,6 +123,10 @@
 		var output = [];
 		var buffer = "";
 		for (var i = 0; i < input.length; i++) {
+			if (i==input.length-1) {
+				output.push(input[i]);
+				break;
+			}
 			var str = input[i];
 			var p = 0;
 			//	console.log(str)
@@ -187,8 +191,11 @@
 			}
 		}
 		txt.push("}")
+		txt.push(" ");
+		txt.push(" ");
+		txt.push("/*author by https://github.com/wonggigi/ResumeTemplate.js*/")
 		var parser = this.DFA(txt);
-
+		console.log(parser);
 		var i = 0;
 		var cur = 0;
 		var row = 0;
@@ -241,6 +248,9 @@
 
 							if (tmp == "'" + this.Introduction.Name + "'" || tmp == "'" + this.Introduction.School + "'" || tmp == "'" + this.Introduction.Major + "'") {
 								ctx.fillStyle = "#ffd306";
+							}
+							if (tmp=="/*author by https://github.com/wonggigi/ResumeTemplate.js*/") {
+								ctx.fillStyle="#bebebe";
 							}
 
 						}
