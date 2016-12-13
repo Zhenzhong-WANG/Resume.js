@@ -3,7 +3,7 @@
 ####What's this?
      模仿Sublime编辑器风格的打字机效果的简历模板
 ####How to use?
-     1. <pre><code><canvas id="canvas" height="1000px" width="600px"></canvas></pre></code>
+     1. <pre><code><canvas id="canvas" height="1000px" width="600px"></canvas></code></pre>
      2.
      <pre><code>
      var json={
@@ -53,10 +53,10 @@
    			'Do':['Description']
    		}]
    	}
-    </pre></code>
+    </code></pre>
     3.
     <pre><code>var canvas=document.getElementById('canvas');
   	var ctx=canvas.getContext("2d");
-  	Resume.render(ctx,json);</pre></code>
+  	Resume.render(ctx,json);</code></pre>
 ####What looks like
 ![](https://github.com/wonggigi/Resume.js/blob/master/img/img1.png)
