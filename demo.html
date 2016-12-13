@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="resumeTemplate.js"></script>
+</head>
+<style>
+	* {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		-moz-user-select:none;
+     		-webkit-user-select:none;
+   		user-select:none;
+	}
+	html,body{
+		height: auto;
+	}
+	#introduction{
+		text-align:center;
+		margin-top: 70px;
+
+	}
+	.header{
+
+		width: 100%;
+		height: 50px;
+		background-color: #bebebe;
+		color: white;
+		position: fixed;
+		top: 0px;
+	}
+
+	.header span{
+		font-size: 16px;
+		width: 110px;
+		font-family: Helvetica, sans-serif;
+	}
+	.title{
+		position: relative;
+		font-size:22px!important;
+		margin-left: 188px!important;
+		padding-right: 40px;
+
+	}
+	.header_ele{
+		vertical-align: middle;
+		display: inline-block;
+		height: 100%;
+		margin-left: 30px;
+		background-color:#bebebe;
+
+	}
+	.header_ele span{
+		text-align: center;
+		margin-top: 10px;
+		display: inline-block;
+	}
+	#particle{
+		position: absolute;
+		top: 0px;
+		width: 100%;
+
+		z-index: -1;
+	}
+</style>
+<body>
+	<div class="header">
+		<span  class="title">Resume</span>
+	</div>
+	<div id="particle">
+		<canvas id="canvasParticle"></canvas>
+	</div>
+	<div id="introduction">
+		<canvas id="canvas" height="1000px" width="600px"></canvas>
+	</div>
+	<script type="text/javascript">
+
+	document.getElementById('particle').style.height=document.body.offsetHeight+100+"px"
+
+	var json={
+		'Introduction':{
+			'Name':'狗鱼',
+			'School':"NorthEasten Unversity",
+			'Major':' Computer Science and Technology',
+			'Skills':[ 'Javascript','CSS/CSS3','Java','Android'],
+		},
+		'Projects':[
+		{
+			'Name':'项目名称 Project Name',
+			'Do':['Description','Description']
+		},{
+      'Name':'项目名称 Project Name',
+			'Do':['Description','Description','Description']
+		},{
+      'Name':'项目名称 Project Name',
+			'Do':['Description']
+		},{
+      'Name':'项目名称 Project Name',
+			'Do':['Description','Description']
+		},{
+      'Name':'项目名称 Project Name',
+			'Do':['Description','Description','Description','Description']
+		},{
+      'Name':'项目名称 Project Name',
+			'Do':['Description','Description']
+		}],
+		'Experience':[{
+			'Name':'东北大学吃瓜三等奖',
+			'Do':['在2014-2015学年吃瓜中表现优异']
+		},{
+      'Name':'东北大学吃瓜三等奖',
+			'Do':['在2013-2014学年吃瓜中表现优异']
+		},{
+      'Name':'东北大学吃瓜三等奖',
+			'Do':['在2015-2016学年吃瓜中表现优异']
+		},{
+			'Name':'搜狐实习',
+			'Do':['1.日常搬砖','2.日常搬砖']
+		},{
+			'Name':'GitHub:https://github.com/wonggigi/',
+			'Do':['Description']
+		},{
+			'Name':'Blog:http://www.wonggigi.com/',
+			'Do':['Description']
+		}]
+	}
+	var canvas=document.getElementById('canvas');
+	var ctx=canvas.getContext("2d");
+	Resume.render(ctx,json);
+
+	var canvasParticle=document.getElementById('canvasParticle');
+	ctx=canvasParticle.getContext("2d");
+	Particle.render(ctx,{})
+	</script>
+</body>
+</html>

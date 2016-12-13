@@ -33,7 +33,7 @@
 	}
 	var parserURL=function (str) {
 		str=str.replace(/'/g,"");
-		var urlPatern=/(\w+):\/\/([\w._:\d]+)/;
+		var urlPatern=/(\w+):\/\/([\w.\/\/\d:]+)/;
 		var result=str.match(urlPatern);
 		if (result!=null) {
 			return result[0];
@@ -173,7 +173,7 @@
 		}
 		txt.push("}");
 		txt.push("");
-		txt.push("FE.prototype.What_Projects_I_Do=function{")
+		txt.push("FE.prototype.What_Projects_I_Have_Done=function{")
 		for (var i = 0; i < this.Projects.length; i++) {
 			txt.push("        this.projects['" + this.Projects[i].Name + "']=");
 			for (var j = 0; j < this.Projects[i].Do.length; j++) {
@@ -200,7 +200,7 @@
 		var cur = 0;
 		var row = 0;
 		var left = 0;
-		
+
 		var animation = function(pos) {
 			if (i < parser.length) {
 				if (cur < parser[i].length) {
@@ -256,7 +256,7 @@
 						}
 
 
-						if (parser[i].search(/http/) != -1 && tmp == parser[i]) {						
+						if (parser[i].search(/http/) != -1 && tmp == parser[i]) {
 							linkPos.push({
 								x: pos,
 								y: 50 + row * 20,
@@ -264,7 +264,7 @@
 								width:ctx.measureText(parser[i]).width,
 								href:parser[i]
 							})
-						} 
+						}
 						ctx.fillText(tmp, pos, 50 + row * 20);
 						cur++;
 						if (tmp == parser[i])
