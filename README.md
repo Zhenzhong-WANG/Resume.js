@@ -1,8 +1,8 @@
 ##前端简历模板
 
-*What's this?
+What's this?
      模仿Sublime编辑器风格的打字机效果的建立模板
-*How to use?
+How to use?
      1. <pre><code><canvas id="canvas" height="1000px" width="600px"></canvas></pre></code>
      2.
      <pre><code>
@@ -58,5 +58,5 @@
     <pre><code>var canvas=document.getElementById('canvas');
   	var ctx=canvas.getContext("2d");
   	Resume.render(ctx,json);</pre></code>
-*What looks like
+What looks like
 ![](https://github.com/wonggigi/Resume.js/blob/master/img/img1.png)
