@@ -3,8 +3,8 @@
 ####What's this?
      模仿Sublime编辑器风格的打字机效果的简历模板
 ####What looks like
-![](https://github.com/wonggigi/Resume.js/blob/master/img/demo.gif)
 ![](https://github.com/wonggigi/Resume.js/blob/master/img/img1.png)
+![](https://github.com/wonggigi/Resume.js/blob/master/img/demo.gif)
 ####How to use?
      1.
      <canvas id="canvas" height="1000px" width="600px"></canvas>
