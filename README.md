@@ -11,13 +11,19 @@
 
 #### How to use?
 
-     * 1.HTML
+* 1.HTML
      
-     ```js <canvas id="canvas" height="1000px" width="600px"></canvas>```
+```js
      
-     * 2.JavaScript
+     <canvas id="canvas" height="1000px" width="600px"></canvas>
      
-     ```js
+```
+     
+* 2.JavaScript
+
+     
+```js
+     
      var json={
    		'Introduction':{
    			'Name':'狗鱼',
@@ -69,5 +75,5 @@
      var canvas=document.getElementById('canvas');
   	var ctx=canvas.getContext("2d");
   	Resume.render(ctx,json);
-     ```
+```
 
